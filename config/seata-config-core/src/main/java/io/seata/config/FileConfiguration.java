@@ -98,7 +98,9 @@ public class FileConfiguration extends AbstractConfiguration<ConfigChangeListene
         }
         ConfigFuture configFuture = new ConfigFuture(dataId, defaultValue, ConfigOperation.GET, timeoutMills);
         configOperateExecutor.submit(new ConfigOperateRunnable(configFuture));
-        return (String)configFuture.get();
+        String configVal=(String)configFuture.get();
+        System.out.println("=============>>>>> load config: "+dataId+"="+configVal);
+        return configVal;
     }
 
     @Override

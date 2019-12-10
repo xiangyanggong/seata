@@ -236,34 +236,34 @@
             <id>licenseCheck</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>license-maven-plugin</artifactId>
-                        <version>1.20</version>
-                        <executions>
-                            <execution>
-                                <id>license-check</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>add-third-party</goal>
-                                </goals>
-                                <configuration>
-                                    <includeOptional>false</includeOptional>
-                                    <useMissingFile>false</useMissingFile>
-                                    <failOnMissing>false</failOnMissing>
-                                    <licenseMerges>
-                                        <licenseMerge>Apache License, Version 2.0|The Apache Software License, Version
-                                            2.0|ASF 2.0|Apache 2|Apache-2.0|Apache 2.0 License|Apache 2.0|Apache License v2.0|Apache License 2.0|The Apache License, Version 2.0|The Apache Software License, Version 2.0
-                                        </licenseMerge>
-                                        <licenseMerge>The MIT License|MIT License</licenseMerge>
-                                        <licenseMerge>The 3-Clause BSD License|New BSD License|3-Clause BSD
-                                            License|BSD|3-Clause BSD License|The New BSD License
-                                        </licenseMerge>
-                                    </licenseMerges>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.codehaus.mojo</groupId>-->
+<!--                        <artifactId>license-maven-plugin</artifactId>-->
+<!--                        <version>1.20</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>license-check</id>-->
+<!--                                <phase>generate-sources</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>add-third-party</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <includeOptional>false</includeOptional>-->
+<!--                                    <useMissingFile>false</useMissingFile>-->
+<!--                                    <failOnMissing>false</failOnMissing>-->
+<!--                                    <licenseMerges>-->
+<!--                                        <licenseMerge>Apache License, Version 2.0|The Apache Software License, Version-->
+<!--                                            2.0|ASF 2.0|Apache 2|Apache-2.0|Apache 2.0 License|Apache 2.0|Apache License v2.0|Apache License 2.0|The Apache License, Version 2.0|The Apache Software License, Version 2.0-->
+<!--                                        </licenseMerge>-->
+<!--                                        <licenseMerge>The MIT License|MIT License</licenseMerge>-->
+<!--                                        <licenseMerge>The 3-Clause BSD License|New BSD License|3-Clause BSD-->
+<!--                                            License|BSD|3-Clause BSD License|The New BSD License-->
+<!--                                        </licenseMerge>-->
+<!--                                    </licenseMerges>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
@@ -390,57 +390,57 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>com.mycila</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-                <version>${license-maven-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>remove</goal>
-                            <goal>format</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <quiet>true</quiet>
-                    <header>${user.dir}/style/copyright</header>
-                    <includes>
-                        <include>**/src/main/java/**</include>
-                        <include>**/src/test/java/**</include>
-                    </includes>
-                    <excludes>
-                        <exclude>**/generated/**</exclude>
-                    </excludes>
-                    <strictCheck>true</strictCheck>
-                    <mapping>
-                        <java>SLASHSTAR_STYLE</java>
-                    </mapping>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${maven-checkstyle-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>validate</id>
-                        <phase>validate</phase>
-                        <configuration>
-                            <configLocation>${user.dir}/style/feats_checkstyle.xml</configLocation>
-                            <encoding>UTF-8</encoding>
-                            <consoleOutput>true</consoleOutput>
-                            <failsOnError>false</failsOnError>
-                            <failOnViolation>false</failOnViolation>
-                            <excludes>**/generated/**</excludes>
-                        </configuration>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.mycila</groupId>-->
+<!--                <artifactId>license-maven-plugin</artifactId>-->
+<!--                <version>${license-maven-plugin.version}</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>generate-sources</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>remove</goal>-->
+<!--                            <goal>format</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <quiet>true</quiet>-->
+<!--                    <header>${user.dir}/style/copyright</header>-->
+<!--                    <includes>-->
+<!--                        <include>**/src/main/java/**</include>-->
+<!--                        <include>**/src/test/java/**</include>-->
+<!--                    </includes>-->
+<!--                    <excludes>-->
+<!--                        <exclude>**/generated/**</exclude>-->
+<!--                    </excludes>-->
+<!--                    <strictCheck>true</strictCheck>-->
+<!--                    <mapping>-->
+<!--                        <java>SLASHSTAR_STYLE</java>-->
+<!--                    </mapping>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--                <version>${maven-checkstyle-plugin.version}</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>validate</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <configuration>-->
+<!--                            <configLocation>${user.dir}/style/feats_checkstyle.xml</configLocation>-->
+<!--                            <encoding>UTF-8</encoding>-->
+<!--                            <consoleOutput>true</consoleOutput>-->
+<!--                            <failsOnError>false</failsOnError>-->
+<!--                            <failOnViolation>false</failOnViolation>-->
+<!--                            <excludes>**/generated/**</excludes>-->
+<!--                        </configuration>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
